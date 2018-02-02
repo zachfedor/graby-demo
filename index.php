@@ -42,7 +42,13 @@
   <?php
   if (!empty($_POST)):
     $graby = new Graby\Graby();
-    $result = $graby->cleanupHtml($_POST["html"], $_POST["url"]);
+
+    if (empty($_POST["html"])) {
+      $content = $graby->fetchContent($_POST["url"]);
+      $result = $content["html"];
+    } else {
+      $result = $graby->cleanupHtml($_POST["html"], $_POST["url"]);
+    }
   ?>
     <h2>Output</h2>
 
