@@ -1,0 +1,15 @@
+{
+    "name": "zachfedor/graby-demo",
+    "description": "a demo for graby article extractor",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "j0k3r/graby": "^1.12"
+    },
+    "authors": [
+        {
+            "name": "zachfedor",
+            "email": "zachfedor@gmail.com"
+        }
+    ]
+}
